@@ -10,7 +10,11 @@ const ImageGallery = ({ images, openModal }) => {
     <>
       <ul className={styles.ImageGallery}>
         {images.map(image => (
-          <ImageGalleryItem key={image.id} image={image} onClick={openModal} />
+          <ImageGalleryItem
+            key={image.id}
+            image={image}
+            onClick={() => openModal(image.webformatURL)}
+          />
         ))}
       </ul>
     </>
